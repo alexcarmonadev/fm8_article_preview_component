@@ -1,0 +1,340 @@
+:root {
+  /* ------------PRIMARY COLORS------------ */
+  --blue1: hsl(217, 19%, 35%);
+  --blue2: hsl(214, 17%, 51%);
+  --blue3: hsl(212, 23%, 69%);
+  --blue4: hsl(210, 46%, 95%);
+
+  --oracle: hsl(165, 37%, 33%);
+  --copper: hsl(32, 55%, 47%);
+
+  /* ------------FONT------------ */
+  --font: 'Manrope', sans-serif; /* 500, 700 */
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4.69rem;
+  max-width: 1440px;
+  font-family: var(--font);
+  font-size: 13px;
+  background-color: var(--blue4);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 16.26rem;
+  }
+}
+
+/* ------------CARD------------ */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 39% 61%;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20.5rem;
+  height: 32.06rem;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+    width: 45.63rem;
+    height: 17.56rem;
+    overflow: visible;
+  }
+}
+
+/* ------------CARD-IMAGE------------ */
+.card__img {
+  overflow: hidden;
+}
+
+.main-img {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transform: translateY(-16px);
+  -ms-transform: translateY(-16px);
+  transform: translateY(-16px);
+}
+
+@media screen and (min-width: 768px) {
+  .card__img {
+    width: 17.75rem;
+  }
+
+  .main-img {
+    width: calc(100% - 0.2rem);
+    border-radius: 0.8rem;
+    -webkit-transform: scale(1.25) translate(1.5rem, 1.4rem);
+    -ms-transform: scale(1.25) translate(1.5rem, 1.4rem);
+    transform: scale(1.25) translate(1.5rem, 1.4rem);
+  }
+}
+
+/* ------------CARD-INFO------------ */
+.card__info {
+  grid-area: 2 / 1 / 3 / 2;
+  padding: 2.3rem 2rem 0 2rem;
+}
+
+.main-title {
+  padding-bottom: 0.94rem;
+  font-size: 1.26em;
+  color: var(--blue1);
+}
+
+.main-text {
+  margin-bottom: 1.88rem;
+  font-size: 1.03em;
+  line-height: 1.5;
+  color: var(--blue2);
+}
+
+@media screen and (min-width: 768px) {
+  .card__info {
+    grid-area: 1 / 2 / 2 / 3;
+    margin-bottom: -26px;
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  .main-title {
+    padding-bottom: 0.8rem;
+    font-size: 1.58em;
+  }
+
+  .main-text {
+    margin-bottom: 1.14rem;
+    font-size: 1.02em;
+    line-height: 1.6;
+  }
+}
+
+/* ------------CARD-FOOTER------------ */
+.card__info-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: -2.5rem;
+  width: 10.94rem;
+}
+
+.img-avatar {
+  width: 2.5rem;
+  border-radius: 2.8rem;
+}
+
+.box-text {
+  margin-left: -21.88rem;
+}
+
+.text-name {
+  margin-bottom: 0.13rem;
+  font-size: 1.02em;
+  color: var(--blue1);
+}
+
+.text-time {
+  font-size: 1.02em;
+  color: var(--blue3);
+}
+
+.btn {
+  position: relative;
+  bottom: -0.31rem;
+  right: -14.69rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--blue4) url('../assets/images/icon-share.svg') center
+    no-repeat;
+  border-radius: 2.8rem;
+  border: transparent;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .card__info-footer {
+    position: relative;
+    margin-bottom: 1.88rem;
+    width: 10.75rem;
+  }
+
+  .img-avatar {
+    width: 2.5rem;
+  }
+
+  .text-name {
+    font-size: 1.02em;
+  }
+
+  .text-time {
+    font-size: 1.02em;
+  }
+
+  .btn {
+    position: relative;
+    bottom: 4.06rem;
+    right: -20.94rem;
+    cursor: pointer;
+  }
+}
+
+/* ------------CARD-SOCIAL------------ */
+.card__social {
+  display: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: -4.38rem;
+  padding: 0 2.19rem;
+  height: 4.38rem;
+  background-color: var(--blue1);
+  border-radius: 0 0 0.6rem 0.6rem;
+}
+
+.social-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.social-item {
+  width: 1.25rem;
+  height: 1.25rem;
+  list-style-type: none;
+}
+
+.share {
+  margin-right: 2.5rem;
+}
+
+.social-share {
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--blue3);
+}
+
+.social-item:nth-child(3) {
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  transform: translateY(2px);
+}
+
+.active {
+  display: none;
+}
+
+.active2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dark {
+  background: var(--blue2) url('../assets/images/icon-share2.svg') center
+    no-repeat;
+  -webkit-transform: translateY(0.55rem);
+  -ms-transform: translateY(0.55rem);
+  transform: translateY(0.55rem);
+  border: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .card__social {
+    position: absolute;
+    bottom: 4.2rem;
+    right: -11.8rem;
+    width: 15.44rem;
+    height: 3.44rem;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 0.6rem;
+  }
+
+  .card__social::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 6.94rem;
+    border-top: 15px solid var(--blue1);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+
+  .social-menu {
+    gap: 1.25rem;
+  }
+
+  .social-share {
+    margin-left: 0.2rem;
+    font-size: 1.02em;
+    font-weight: 500;
+  }
+
+  .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .dark {
+    position: relative;
+    bottom: 4.06rem;
+    background: var(--blue2) url('../assets/images/icon-share2.svg') center
+      no-repeat;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* ------------FOOTER------------ */
+.attribution {
+  font-size: 0.8em;
+  font-weight: 700;
+  text-align: center;
+  color: var(--oracle);
+}
+
+.attribution a {
+  color: var(--copper);
+}
